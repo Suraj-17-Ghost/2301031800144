@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Living Launch Screen</title>
+    <style>
+        /* Modern CSS Reset with Variables */
+        :root {
+            --primary-green: #075e54;
+            --light-green: #128c7e;
+            --white: #ffffff;
+            --dark-text: #333333;
+            --light-text: #f5f5f5;
+            --button-green: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 
+                        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                        'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--primary-green);
+            color: var(--light-text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        /* Launch Screen Content */
+        .launch-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        /* Header Section */
+        .launch-header {
+            margin-bottom: 30px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .launch-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .launch-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* Main Content */
+        .launch-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .launch-message {
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 300px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s 0.3s both;
+        }
+        
+        /* Button */
+        .launch-button {
+            background-color: var(--button-green);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s 0.5s both;
+        }
+        
+        .launch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .launch-button:active {
+            transform: translateY(1px);
+        }
+        
+        /* Background Elements */
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .circle-1 {
+            width: 200px;
+            height: 200px;
+            top: -50px;
+            right: -50px;
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        .circle-2 {
+            width: 150px;
+            height: 150px;
+            bottom: -30px;
+            left: -30px;
+            animation: float 10s infinite ease-in-out reverse;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 375px) {
+            .launch-title {
+                font-size: 24px;
+            }
+            
+            .launch-subtitle {
+                font-size: 18px;
+            }
+            
+            .launch-message {
+                font-size: 16px;
+            }
+            
+            .launch-button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="launch-container">
+        <!-- Background Elements -->
+        <div class="bg-circle circle-1"></div>
+        <div class="bg-circle circle-2"></div>
+        
+        <!-- Header Content -->
+        <div class="launch-header">
+            <h1 class="launch-title">Green</h1>
+            <h2 class="launch-subtitle">Living</h2>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="launch-content">
+            <p class="launch-message">We will gain the reward for reguid</p>
+            <button class="launch-button">Start Learning</button>
+        </div>
+    </div>
+</body>
+</html>

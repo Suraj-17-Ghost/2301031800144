@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Reduce</title>
+    <style>
+        /* Modern CSS Reset with Variables */
+        :root {
+            --status-bar: #1a1a1a;
+            --header-bg: #075e54;
+            --white: #ffffff;
+            --screen-bg: #f0f2f5;
+            --primary-text: #333333;
+            --accent-color: #25D366;
+            --reduce-color: #075e54;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 
+                        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+                        'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--screen-bg);
+            color: var(--primary-text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        /* iOS-style Status Bar */
+        .status-bar {
+            background-color: var(--status-bar);
+            color: var(--white);
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .time {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* App Header */
+        .app-header {
+            background-color: var(--header-bg);
+            color: var(--white);
+            padding: 16px 20px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Main Content */
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .reduce-text {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--reduce-color);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: -40px; /* Adjust vertical position */
+            position: relative;
+            animation: fadeInScale 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        
+        /* Background Decoration */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, 
+                                      rgba(18, 140, 126, 0.08) 0%, 
+                                      transparent 40%),
+                        radial-gradient(circle at 30% 70%, 
+                                      rgba(18, 140, 126, 0.08) 0%, 
+                                      transparent 40%);
+            z-index: -1;
+        }
+        
+        /* Animations */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 375px) {
+            .reduce-text {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- iOS-style Status Bar -->
+    <div class="status-bar">
+        <span>9:41</span>
+        <span class="time">9:41</span>
+        <span></span> <!-- Spacer for right icons -->
+    </div>
+    
+    <!-- App Header -->
+    <div class="app-header">
+        <div class="header-title">Home</div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content">
+        <div class="bg-pattern"></div>
+        <div class="reduce-text">Reduce</div>
+    </div>
+
+    <div class="content">
+        <div class="bg-pattern"></div>
+        <div class="reduce-text">Reuse</div>
+    </div>
+
+    <div class="content">
+        <div class="bg-pattern"></div>
+        <div class="reduce-text">Recycle</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview Screen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: lawngreen ;
+        }
+
+        .overview-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            padding: 35px;
+            width: 100%;
+            max-width: 500px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .screen-title {
+            color: #00796b;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(0, 121, 107, 0.1);
+            text-align: center;
+        }
+
+        .insights-card {
+            background: linear-gradient(145deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .insights-title {
+            color: #2e7d32;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .insights-title::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 20px;
+            background-color: #4caf50;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+
+        .insights-content {
+            color: #455a64;
+            font-size: 16px;
+            line-height: 1.7;
+            letter-spacing: 0.3px;
+        }
+
+        .insights-content p {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .insights-content p::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .highlight {
+            font-weight: 700;
+            color: #1b5e20;
+            background-color: rgba(76, 175, 80, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overview-container">
+        <h1 class="screen-title">Overview screen</h1>
+        
+        <div class="insights-card">
+            <h2 class="insights-title">Insights</h2>
+            <div class="insights-content">
+                <p><span class="highlight">Users can earn rewards</span> by</p>
+                <p>adopting sustainable habits and</p>
+                <p>practices. These might include</p>
+                <p>activities such as recycling,</p>
+                <p>reducing energy consumption,</p>
+                <p>using public transportation, and</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
